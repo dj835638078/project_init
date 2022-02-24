@@ -1,0 +1,41 @@
+@font-face {
+  font-family: SFProText-Regular;
+  src:
+    local('SFProText-Regular'),
+    url(../fonts/SFProText-Regular.ttf);
+}
+
+@font-face {
+  font-family: SFProText-Medium;
+  src:
+    local('SFProText-Medium'),
+    url(../fonts/SFProText-Medium.ttf);
+}
+
+@font-face {
+  font-family: SFProText-Semibold;
+  src:
+    local('SFProText-Semibold'),
+    url(../fonts/SFProText-Semibold.ttf);
+}
+
+@font-face {
+  font-family: BEBAS_s;
+  src:
+    local('BEBAS_s'),
+    url(../fonts/BEBAS_s.ttf);
+}
+
+@font-face {
+  font-family: SF-Pro-Text-Bold;
+  src:
+    local('SF-Pro-Text-Bold'),
+    url(../fonts/SF-Pro-Text-Bold.otf);
+}
+
+@font-face {
+  font-family: SF-Pro-Text-Black;
+  src:
+    local('SF-Pro-Text-Black'),
+    url(../fonts/SF-Pro-Text-Black.otf);
+}

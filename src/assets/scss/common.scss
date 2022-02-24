@@ -1,0 +1,134 @@
+@function rem($px){
+  @return ($px/16)*1rem;
+}
+
+// vant button:
+// vant button 圆角button样式(primary)
+.vs-border-long-button.van-button {
+  border: none;
+  &.van-button--primary.van-button--normal {
+    background-color: #00c1bc;
+  }
+  &.van-button--round {
+    border-radius: rem(24/2);
+  }
+  .van-button__content {
+    .van-button__text {
+      font-size: rem(32/2);
+    }
+  }
+  // disabled button color is #dddddd
+  &.van-button {
+    border-color: transparent;
+    &.van-button--disabled.van-button--normal {
+      background-color: #dddddd;
+    }
+  }
+}
+
+// vant tabs:
+// vant tabs 布局 - 内容区域占据容器剩余高度
+.vs-tabs-content-fill-residue-height.van-tabs {
+  padding-top: rem(88/2);
+  height: 100%;
+  box-sizing: border-box;
+  .van-tabs__wrap {
+    height: rem(88/2);
+    margin-top: rem(-88/2);
+  }
+  .van-tabs__content {
+    height: 100%;
+    .van-tab__pane {
+      height: 100%;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// vant tabs 底部active条样式
+.vs-tab-bottom-line.van-tabs {
+  .van-tabs__wrap {
+    .van-tabs__nav.van-tabs__nav--line {
+      .van-tabs__line {
+        width: rem(40/2);
+        background-color: #00c1bc;
+      }
+    }
+  }
+}
+
+// vant indexBar:
+// vant indexBar 索引栏的 sidebar [相对于容器!] 竖直居中显示
+.vs-index-bar-vertical-center-relative-to-container.van-index-bar {
+  // 注意写代码时父容器要加上 position:relative
+  .van-index-bar__sidebar {
+    position: absolute;
+  }
+}
+
+// field 样式:
+// disabled 状态下 field 输入框的 label 颜色为深色
+.vs-field-black-label-when-disabled.van-cell.van-field {
+  .van-field--disabled {
+    .van-cell__title.van-field__label {
+      color: #333333;
+    }
+  }
+  .van-cell__title.van-field__label {
+    font-size: rem(32/2);
+    font-weight: 500;
+    color: #333333;
+  }
+  .van-field__control {
+    font-size: rem(30/2);
+    font-weight: 500;
+  }
+}
+
+// vant field 去掉 input 框底部的 border
+.van-cell::after {
+  border: none;
+}
+
+// 文本超出隐藏
+@mixin overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // word-break: break-all;
+  display:-webkit-box; //作为弹性伸缩盒子模型显示。
+  -webkit-box-orient: vertical; //设置伸缩盒子的子元素排列方式--从上到下垂直排列
+}
+// 1行
+.ellipsis-1 {
+  @include overflow-ellipsis;
+  -webkit-line-clamp: 1; //显示的行
+}
+.ellipsis-2 {
+  @include overflow-ellipsis;
+  -webkit-line-clamp: 2; //显示的行
+}
+.ellipsis-3 {
+  @include overflow-ellipsis;
+  -webkit-line-clamp: 3; //显示的行
+}
+.ellipsis-4 {
+  @include overflow-ellipsis;
+  -webkit-line-clamp: 4; //显示的行
+}
+
+// van dialog title 和 message 的文字样式
+.van-dialog {
+  font-family: SFProText-Medium;
+  .van-dialog__header {
+    line-height: 1.5;
+    color: #333333;
+    font-size: rem(32/2);
+    font-family: SFProText-Medium;
+  }
+  .van-dialog__content {
+    font-family: SFProText-Medium;
+    font-size: rem(28/2);
+    line-height: 1.5;
+    color: #666666;
+  }
+}

@@ -1,0 +1,12 @@
+/* 项目通用全局配置 */
+
+/*
+  hostApi: 请求的后端接口地址
+  sensorsServerUrl: 神策上报项目地址，default为神策测试项目地址，production为神策正式项目地址
+*/
+const PAGECONF = {
+  hostApi: '{{ operation_backend_api_domain }}',
+  sensorsServerUrl: '{{ sensors_server_url }}'
+}
+
+export default PAGECONF
